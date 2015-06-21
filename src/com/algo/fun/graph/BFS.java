@@ -1,69 +1,22 @@
-package com.algo.fun;
+package com.algo.fun.graph;
 
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Set;
 
+import com.algo.fun.graph.Vertex.COLOR;
+
 /**
  * Breadth First Search.
  */
 public class BFS<T> {
 
-	private enum COLOR {
-		WHITE, GRAY, BLACK
-	};
-
-	/**
-	 * Vertex.
-	 */
-	public static class Vertex<T> {
-		private final T value;
-		private COLOR color;
-		private int distance;
-		private Vertex<T> parent;
-
-		public Vertex(final T value) {
-			this.value = value;
-			this.color = COLOR.WHITE;
-			this.distance = Integer.MAX_VALUE;
-		}
-
-		public T getValue() {
-			return value;
-		}
-
-		public COLOR getColor() {
-			return color;
-		}
-
-		public void setColor(final COLOR color) {
-			this.color = color;
-		}
-
-		public int getDistance() {
-			return distance;
-		}
-
-		public void setDistance(final int distance) {
-			this.distance = distance;
-		}
-
-		public Vertex<T> getParent() {
-			return parent;
-		}
-
-		public void setParent(final Vertex<T> parent) {
-			this.parent = parent;
-		}
-
-	}
-
-	private final ALGraph<Vertex<T>> graph;
+	private final ALGraph<T> graph;
 
 	private final Queue<Vertex<T>> queue;
 
-	public BFS(final ALGraph<Vertex<T>> graph) {
+	public BFS(final ALGraph<T> graph) {
 		this.graph = graph;
 		this.queue = new LinkedList<>();
 	}
@@ -127,9 +80,12 @@ public class BFS<T> {
 		vertices.add(x);
 		vertices.add(y);
 
-		ALGraph<Vertex<String>> graph = new ALGraph<>(false);
-		graph.addEdge(r, v).addEdge(r, s).addEdge(s, w).addEdge(t, w).addEdge(w, x).addEdge(t, x).addEdge(t, u)
-		.addEdge(x, y).addEdge(x, u).addEdge(u, y);
+		ALGraph<String> graph = new ALGraph<>(false);
+		graph.addEdge(r, v, 1).addEdge(r, s, 1).addEdge(s, w, 1).addEdge(t, w, 1).addEdge(w, x, 1).addEdge(t, x, 1)
+		        .addEdge(t, u, 1).addEdge(x, y, 1).addEdge(x, u, 1).addEdge(u, y, 1);
+
+		graph.displayGraph();
+		System.out.println("");
 
 		BFS<String> bfs = new BFS<>(graph);
 		bfs.compute(s);
