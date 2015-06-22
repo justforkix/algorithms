@@ -37,7 +37,14 @@ public class ALGraph<T> implements Cloneable {
 	 * The vertex links in graph.
 	 */
 	public Set<Vertex<T>> getList(final Vertex<T> vertex) {
-		return adjacencyList.get(vertex).keySet();
+		Set<Vertex<T>> set = null;
+		Map<Vertex<T>, Integer> map = adjacencyList.get(vertex);
+		if (map != null) {
+			return map.keySet();
+		} else {
+			set = new HashSet<>();
+		}
+		return set;
 	}
 
 	public int edgeWeight(final Vertex<T> vertex1, final Vertex<T> vertex2) {

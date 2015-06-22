@@ -45,8 +45,7 @@ public class DFS<T> {
 	private void computeInternal(final Vertex<T> vertex) {
 		vertex.setColor(COLOR.GRAY);
 		vertex.setFirst(time++);
-		Set<Vertex<T>> vertices = graph.getList(vertex);
-		for (Vertex<T> node : vertices) {
+		for (Vertex<T> node : graph.getList(vertex)) {
 			if (node.getColor().equals(COLOR.WHITE)) {
 				node.setParent(vertex);
 				computeInternal(node);
@@ -93,6 +92,7 @@ public class DFS<T> {
 		 * v).addEdge(u, x).addEdge(x, v).addEdge(v, y).addEdge(y, x).addEdge(w,
 		 * y).addEdge(w, z) .addEdge(z, z);
 		 */
+
 		Set<Vertex<String>> vertices = new HashSet<Vertex<String>>();
 
 		Vertex<String> a = new Vertex<>("a");
@@ -130,6 +130,7 @@ public class DFS<T> {
 		}
 		System.out.println("");
 		dfs.printTopologicalSort();
+
 	}
 
 }
