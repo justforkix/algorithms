@@ -91,7 +91,7 @@ public class Vertex<T> {
 
 	@Override
 	public String toString() {
-		return "[" + getValue().toString() + "," + getKey() + "]";
+		return getValue().toString();
 	}
 
 	@Override

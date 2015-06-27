@@ -13,4 +13,8 @@
 - [Bellman Ford](./src/com/algo/fun/graph/BellmanFord.java)
 - [Single Source Shortest Path DAG](./src/com/algo/fun/graph/SingleSourceShortestPathDAG.java)
 - [Dijkstra](./src/com/algo/fun/graph/Dijkstra.java)
+- [MatrixMultiplication](./src/com/algo/fun/graph/MatrixMultiplication.java)
+- [FloydWarshall](./src/com/algo/fun/graph/FloydWarshall.java)
+- [TransitiveClosure](./src/com/algo/fun/graph/TransitiveClosure.java)
+- [Johnson](./src/com/algo/fun/graph/Johnson.java)
 

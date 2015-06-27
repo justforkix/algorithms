@@ -67,6 +67,9 @@ public class Dijkstra<T> {
 		return str;
 	}
 
+	/**
+	 * main.
+	 */
 	public static void main(final String[] args) {
 		Vertex<String> s = new Vertex<>("s");
 		Vertex<String> t = new Vertex<>("t");
