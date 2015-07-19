@@ -18,3 +18,7 @@
 - [TransitiveClosure](./src/com/algo/fun/graph/TransitiveClosure.java)
 - [Johnson](./src/com/algo/fun/graph/Johnson.java)
 
+#### Dynamic Programming
+- [Rod Cutting](./src/com/algo/fun/dp/RodCutting.java)
+- [Matrix Multiplication](./src/com/algo/fun/dp/MatrixMultiplication.java)
+
