@@ -1,5 +1,3 @@
-## Java
-
 ### Algorithms and Data Structures
 
 #### Graph
