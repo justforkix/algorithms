@@ -1,4 +1,4 @@
-package com.algo.fun.graph;
+package com.algo.graph;
 
 import java.util.Collection;
 import java.util.Comparator;

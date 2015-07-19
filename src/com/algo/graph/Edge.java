@@ -1,4 +1,4 @@
-package com.algo.fun.graph;
+package com.algo.graph;
 
 /**
  * Graph edge.

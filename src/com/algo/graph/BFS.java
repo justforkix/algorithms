@@ -1,11 +1,11 @@
-package com.algo.fun.graph;
+package com.algo.graph;
 
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Set;
 
-import com.algo.fun.graph.Vertex.COLOR;
+import com.algo.graph.Vertex.COLOR;
 
 /**
  * Breadth First Search.
