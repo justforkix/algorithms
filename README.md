@@ -19,4 +19,6 @@
 #### Dynamic Programming
 - [Rod Cutting](./src/com/algo/dp/RodCutting.java)
 - [Matrix Multiplication](./src/com/algo/dp/MatrixMultiplication.java)
+- [Longest Common Subsequence](./src/com/algo/dp/LongestCommonSubsequence.java)
+- [Optimal Binary Search Tree](./src/com/algo/dp/OptimalBinarySearchTree.java)
 

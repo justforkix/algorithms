@@ -46,7 +46,6 @@ public class MatrixMultiplication {
 				result = value;
 			}
 		}
-		optimalCost[initialIndex][finalIndex] = result;
 		return result;
 	}
 
@@ -57,7 +56,17 @@ public class MatrixMultiplication {
 		if (optimalCost[initialIndex][finalIndex] < Long.MAX_VALUE) {
 			return optimalCost[initialIndex][finalIndex];
 		} else {
-			return compute(initialIndex, finalIndex);
+			long result = Long.MAX_VALUE;
+			for (int i = initialIndex; i < finalIndex; i++) {
+				long value = topDownMemoized(initialIndex, i) + dimensions[initialIndex - 1] * dimensions[i]
+				        * dimensions[finalIndex] + topDownMemoized(i + 1, finalIndex);
+				if (value < result) {
+					result = value;
+				}
+			}
+			optimalCost[initialIndex][finalIndex] = result;
+			return result;
+
 		}
 	}
 
@@ -101,6 +110,9 @@ public class MatrixMultiplication {
 		return optimalPosition;
 	}
 
+	/**
+	 * main.
+	 */
 	public static void main(final String[] args) {
 		int[] dimensions = { 30, 35, 15, 5, 10, 20, 25 };
 		MatrixMultiplication mm = new MatrixMultiplication(dimensions);

@@ -34,7 +34,6 @@ public class RodCutting {
 				result = value;
 			}
 		}
-		optimalPrice[size] = result;
 		return result;
 	}
 
@@ -45,7 +44,15 @@ public class RodCutting {
 		if (optimalPrice[size] > Long.MIN_VALUE) {
 			return optimalPrice[size];
 		} else {
-			return compute(size);
+			long result = Long.MIN_VALUE;
+			for (int i = 1; i <= size; i++) {
+				long value = price[i - 1] + topDownMemoized(size - i);
+				if (value > result) {
+					result = value;
+				}
+			}
+			optimalPrice[size] = result;
+			return result;
 		}
 	}
 
