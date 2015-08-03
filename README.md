@@ -21,4 +21,6 @@
 - [Matrix Multiplication](./src/com/algo/dp/MatrixMultiplication.java)
 - [Longest Common Subsequence](./src/com/algo/dp/LongestCommonSubsequence.java)
 - [Optimal Binary Search Tree](./src/com/algo/dp/OptimalBinarySearchTree.java)
+- [Binomial Coefficient](./src/com/algo/dp/BinomialCoefficient.java)
+- [Edit Distance](./src/com/algo/dp/EditDistance.java)
 
